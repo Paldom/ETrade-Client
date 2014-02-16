@@ -16,7 +16,7 @@ define(function (require) {
     
 
     App.Configs = {
-        API : "http://localhost:3000"
+        API : "http://sleepy-ocean-2201.herokuapp.com"
     };
     
     App.addRegions({
