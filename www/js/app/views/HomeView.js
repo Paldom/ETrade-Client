@@ -25,7 +25,6 @@ define(function (require) {
         },
 
         onRender: function (that) {
-           this.$el.hammer();
         },
 
         events: {

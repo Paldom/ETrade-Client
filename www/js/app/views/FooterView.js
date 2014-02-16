@@ -24,7 +24,8 @@ define(function (require) {
         },
 
         onRender: function (that) {
-           this.$el.hammer();
+           //FastClick(this.$el);
+           //this.$el.hammer();
         },
 
         events: {

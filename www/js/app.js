@@ -39,6 +39,16 @@ define(function (require) {
         });
         Backbone.history.start();
     });
+    
+    var afterRender = function(view){
+        IcomaticUtils.run();
+        new FastClick(document.body);
+        $('body').hammer();
+    };
+    
+    App.headerRegion.on("show", afterRender);
+    App.contentRegion.on("show", afterRender);
+    App.footerRegion.on("show", afterRender);
 
     return App;
 });

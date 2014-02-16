@@ -27,7 +27,6 @@ define(function (require) {
         },
 
         onRender: function (that) {
-           this.$el.hammer();
         },
         
         setTitle: function(titleText){
