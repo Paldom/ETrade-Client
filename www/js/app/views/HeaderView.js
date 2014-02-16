@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define */
+/*global define, window, alert */
 
 define(function (require) {
 
@@ -19,7 +19,9 @@ define(function (require) {
         ui: {
             title: "#title",
             back: "#btnBack",
-            backBox: "#btnBackBox"
+            backBox: "#btnBackBox",
+            settings: "#btnSettings",
+            settingsBox: "#btnSettingsBox"
         },
 
         initialize: function () {
@@ -29,24 +31,37 @@ define(function (require) {
         onRender: function (that) {
         },
         
-        setTitle: function(titleText){
+        setTitle: function (titleText) {
             this.ui.title.text(titleText);
         },
                                                                             
-        enableBack: function(isEnabled){
-            if(isEnabled){
+        enableBack: function (isEnabled) {
+            if (isEnabled) {
                 this.ui.backBox.show();
             } else {
                 this.ui.backBox.hide();
             }
-        },                                      
+        },
+        
+        enableSettings: function (isEnabled) {
+            if (isEnabled) {
+                this.ui.settingsBox.show();
+            } else {
+                this.ui.settingsBox.hide();
+            }
+        },
 
         events: {
-            'tap #btnBack': 'back'
+            'tap #btnBack': 'back',
+            'tap #btnSettings': 'settings'
         },
         
         back: function () {
-            window.history.back();  
+            window.history.back();
+        },
+        
+        settings: function () {
+            alert("Settings clicked");
         }
         
     });

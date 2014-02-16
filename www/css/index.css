@@ -58,3 +58,19 @@ section {
 .topcoat-icon {
   font-size: 1.55rem;
 }
+
+.header_button_left{
+    position: fixed;
+    left: 0.5rem;
+    top: 0.5rem;
+}
+
+.header_button_right{
+    position: fixed;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+.header_padding{
+    padding: 0 3.5rem;
+}

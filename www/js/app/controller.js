@@ -21,6 +21,7 @@ define(function (require) {
         login: function () {
             App.headerView.setTitle("ETrade bejelentkezés");
             App.headerView.enableBack(false);
+            App.headerView.enableSettings(false);
             require(["app/views/LoginView", "app/models/LoginModel"], function (View, Model) {
                 App.contentRegion.show(new View(new Model()));
             });
@@ -29,6 +30,7 @@ define(function (require) {
         home: function () {
             App.headerView.setTitle("ETrade rendszer");
             App.headerView.enableBack(true);
+            App.headerView.enableSettings(true);
             require(["app/views/HomeView"], function (View) {
                 App.contentRegion.show(new View());
             });
