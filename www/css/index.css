@@ -1,0 +1,60 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+header {
+	text-align: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+    z-index: 10;
+}
+
+footer {
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+section {
+    z-index: -1;	
+}
+
+.header_height_small {
+    padding-top: 4.375rem;
+}
+
+.header_height_large {
+    padding-top: 6.375rem;
+}
+
+.full {
+    width: 100%;
+}
+
+.full_width_padding{
+    padding: 1rem 1rem 0 1rem;
+}
+
+.full_width_padding *{
+    width: 100%;
+}
+
+.all_margin *{
+    margin: 0.5rem 0;
+}
+
+.topcoat-icon {
+  font-size: 1.55rem;
+}

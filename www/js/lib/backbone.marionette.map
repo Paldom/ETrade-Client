@@ -1,0 +1,1559 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>backbone.marionette/lib/backbone.marionette.map at master · marionettejs/backbone.marionette</title>
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub" />
+    <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-144.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144.png" />
+    <meta property="fb:app_id" content="1401488693436528"/>
+
+      <meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="marionettejs/backbone.marionette" name="twitter:title" /><meta content="backbone.marionette - Make your Backbone.js apps dance with a composite application architecture!" name="twitter:description" /><meta content="https://0.gravatar.com/avatar/eaafc91086a3bab1c84014247bb008a0?d=https%3A%2F%2Fidenticons.github.com%2Fbe1e86b2c138688daafbe7783f146a2c.png&amp;r=x&amp;s=400" name="twitter:image:src" />
+<meta content="GitHub" property="og:site_name" /><meta content="object" property="og:type" /><meta content="https://0.gravatar.com/avatar/eaafc91086a3bab1c84014247bb008a0?d=https%3A%2F%2Fidenticons.github.com%2Fbe1e86b2c138688daafbe7783f146a2c.png&amp;r=x&amp;s=400" property="og:image" /><meta content="marionettejs/backbone.marionette" property="og:title" /><meta content="https://github.com/marionettejs/backbone.marionette" property="og:url" /><meta content="backbone.marionette - Make your Backbone.js apps dance with a composite application architecture!" property="og:description" />
+
+    <meta name="hostname" content="github-fe137-cp1-prd.iad.github.net">
+    <meta name="ruby" content="ruby 2.1.0p0-github-tcmalloc (87d8860372) [x86_64-linux]">
+    <link rel="assets" href="https://github.global.ssl.fastly.net/">
+    <link rel="conduit-xhr" href="https://ghconduit.com:25035/">
+    <link rel="xhr-socket" href="/_sockets" />
+
+
+    <meta name="msapplication-TileImage" content="/windows-tile.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="selected-link" value="repo_source" data-pjax-transient />
+    <meta content="collector.githubapp.com" name="octolytics-host" /><meta content="collector-cdn.github.com" name="octolytics-script-host" /><meta content="github" name="octolytics-app-id" /><meta content="6D825888:3BA3:11231DC:52FFC5ED" name="octolytics-dimension-request_id" /><meta content="3684864" name="octolytics-actor-id" /><meta content="Paldom" name="octolytics-actor-login" /><meta content="8bb767c8a8edded3442b257b2a3eddfce3accbb673d9d71645837084107afcb5" name="octolytics-actor-hash" />
+    
+
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="SbvTXUWWRx7PWVPYyShEhBg1EX05STiWoImUD0AedH8=" name="csrf-token" />
+
+    <link href="https://github.global.ssl.fastly.net/assets/github-9a2bd2ef14857c7ba70e7f1b96f8021d89fa7439.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="https://github.global.ssl.fastly.net/assets/github2-625722abd417791bbce318a0b3b68d52a3549015.css" media="all" rel="stylesheet" type="text/css" />
+    
+    
+
+
+      <script src="https://github.global.ssl.fastly.net/assets/frameworks-693e11922dcacc3a7408a911fe1647da4febd3bd.js" type="text/javascript"></script>
+      <script async="async" defer="defer" src="https://github.global.ssl.fastly.net/assets/github-df91b5db3eea6cebc49f29b84a77174f8e21a8a9.js" type="text/javascript"></script>
+      
+      <meta http-equiv="x-pjax-version" content="84592675e6037c2d77d871bf84245a86">
+
+        <link data-pjax-transient rel='permalink' href='/marionettejs/backbone.marionette/blob/0ae0be8d30113109a1d59b9fcd332ad1ba26a4b7/lib/backbone.marionette.map'>
+
+  <meta name="description" content="backbone.marionette - Make your Backbone.js apps dance with a composite application architecture!" />
+
+  <meta content="2273169" name="octolytics-dimension-user_id" /><meta content="marionettejs" name="octolytics-dimension-user_login" /><meta content="2965621" name="octolytics-dimension-repository_id" /><meta content="marionettejs/backbone.marionette" name="octolytics-dimension-repository_nwo" /><meta content="true" name="octolytics-dimension-repository_public" /><meta content="false" name="octolytics-dimension-repository_is_fork" /><meta content="2965621" name="octolytics-dimension-repository_network_root_id" /><meta content="marionettejs/backbone.marionette" name="octolytics-dimension-repository_network_root_nwo" />
+  <link href="https://github.com/marionettejs/backbone.marionette/commits/master.atom" rel="alternate" title="Recent Commits to backbone.marionette:master" type="application/atom+xml" />
+
+  </head>
+
+
+  <body class="logged_in  env-production windows vis-public page-blob tipsy-tooltips">
+    <div class="wrapper">
+      
+      
+      
+      
+
+
+      <div class="header header-logged-in true">
+  <div class="container clearfix">
+
+    <a class="header-logo-invertocat" href="https://github.com/">
+  <span class="mega-octicon octicon-mark-github"></span>
+</a>
+
+    
+    <a href="/notifications" aria-label="You have unread notifications" class="notification-indicator tooltipped downwards" data-gotokey="n">
+        <span class="mail-status unread"></span>
+</a>
+
+      <div class="command-bar js-command-bar  in-repository">
+          <form accept-charset="UTF-8" action="/search" class="command-bar-form" id="top_search_form" method="get">
+
+<input type="text" data-hotkey=" s" name="q" id="js-command-bar-field" placeholder="Search or type a command" tabindex="1" autocapitalize="off"
+    
+    data-username="Paldom"
+      data-repo="marionettejs/backbone.marionette"
+      data-branch="master"
+      data-sha="ddd5ffce33e3629bedb6980e9c8094bb7a556db1"
+  >
+
+    <input type="hidden" name="nwo" value="marionettejs/backbone.marionette" />
+
+    <div class="select-menu js-menu-container js-select-menu search-context-select-menu">
+      <span class="minibutton select-menu-button js-menu-target">
+        <span class="js-select-button">This repository</span>
+      </span>
+
+      <div class="select-menu-modal-holder js-menu-content js-navigation-container">
+        <div class="select-menu-modal">
+
+          <div class="select-menu-item js-navigation-item js-this-repository-navigation-item selected">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" class="js-search-this-repository" name="search_target" value="repository" checked="checked" />
+            <div class="select-menu-item-text js-select-button-text">This repository</div>
+          </div> <!-- /.select-menu-item -->
+
+          <div class="select-menu-item js-navigation-item js-all-repositories-navigation-item">
+            <span class="select-menu-item-icon octicon octicon-check"></span>
+            <input type="radio" name="search_target" value="global" />
+            <div class="select-menu-item-text js-select-button-text">All repositories</div>
+          </div> <!-- /.select-menu-item -->
+
+        </div>
+      </div>
+    </div>
+
+  <span class="octicon help tooltipped downwards" aria-label="Show command bar help">
+    <span class="octicon octicon-question"></span>
+  </span>
+
+
+  <input type="hidden" name="ref" value="cmdform">
+
+</form>
+        <ul class="top-nav">
+          <li class="explore"><a href="/explore">Explore</a></li>
+            <li><a href="https://gist.github.com">Gist</a></li>
+            <li><a href="/blog">Blog</a></li>
+          <li><a href="https://help.github.com">Help</a></li>
+        </ul>
+      </div>
+
+    
+
+
+  <ul id="user-links">
+    <li>
+      <a href="/Paldom" class="name">
+        <img alt="Paldom" class=" js-avatar" data-user="3684864" height="20" src="https://1.gravatar.com/avatar/71ef027278c607894a68aae48255fa6e?d=https%3A%2F%2Fidenticons.github.com%2F76d4d6406b829da3c1117b20ae251796.png&amp;r=x&amp;s=140" width="20" /> Paldom
+      </a>
+    </li>
+
+    <li class="new-menu dropdown-toggle js-menu-container">
+      <a href="#" class="js-menu-target tooltipped downwards" aria-label="Create new...">
+        <span class="octicon octicon-plus"></span>
+        <span class="dropdown-arrow"></span>
+      </a>
+
+      <div class="js-menu-content">
+      </div>
+    </li>
+
+    <li>
+      <a href="/settings/profile" id="account_settings"
+        class="tooltipped downwards"
+        aria-label="Account settings ">
+        <span class="octicon octicon-tools"></span>
+      </a>
+    </li>
+    <li>
+      <a class="tooltipped downwards" href="/logout" data-method="post" id="logout" aria-label="Sign out">
+        <span class="octicon octicon-log-out"></span>
+      </a>
+    </li>
+
+  </ul>
+
+<div class="js-new-dropdown-contents hidden">
+  
+
+<ul class="dropdown-menu">
+  <li>
+    <a href="/new"><span class="octicon octicon-repo-create"></span> New repository</a>
+  </li>
+  <li>
+    <a href="/organizations/new"><span class="octicon octicon-organization"></span> New organization</a>
+  </li>
+
+
+    <li class="section-title">
+      <span title="marionettejs/backbone.marionette">This repository</span>
+    </li>
+      <li>
+        <a href="/marionettejs/backbone.marionette/issues/new"><span class="octicon octicon-issue-opened"></span> New issue</a>
+      </li>
+</ul>
+
+</div>
+
+
+    
+  </div>
+</div>
+
+      
+
+        
+
+
+
+
+          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+    
+    <div class="pagehead repohead instapaper_ignore readability-menu">
+      <div class="container">
+        
+
+<ul class="pagehead-actions">
+
+    <li class="subscription">
+      <form accept-charset="UTF-8" action="/notifications/subscribe" class="js-social-container" data-autosubmit="true" data-remote="true" method="post"><div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="SbvTXUWWRx7PWVPYyShEhBg1EX05STiWoImUD0AedH8=" /></div>  <input id="repository_id" name="repository_id" type="hidden" value="2965621" />
+
+    <div class="select-menu js-menu-container js-select-menu">
+      <a class="social-count js-social-count" href="/marionettejs/backbone.marionette/watchers">
+        381
+      </a>
+      <span class="minibutton select-menu-button with-count js-menu-target" role="button" tabindex="0">
+        <span class="js-select-button">
+          <span class="octicon octicon-eye-watch"></span>
+          Watch
+        </span>
+      </span>
+
+      <div class="select-menu-modal-holder">
+        <div class="select-menu-modal subscription-menu-modal js-menu-content">
+          <div class="select-menu-header">
+            <span class="select-menu-title">Notification status</span>
+            <span class="octicon octicon-remove-close js-menu-close"></span>
+          </div> <!-- /.select-menu-header -->
+
+          <div class="select-menu-list js-navigation-container" role="menu">
+
+            <div class="select-menu-item js-navigation-item selected" role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input checked="checked" id="do_included" name="do" type="radio" value="included" />
+                <h4>Not watching</h4>
+                <span class="description">You only receive notifications for conversations in which you participate or are @mentioned.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-watch"></span>
+                  Watch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_subscribed" name="do" type="radio" value="subscribed" />
+                <h4>Watching</h4>
+                <span class="description">You receive notifications for all conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-eye-unwatch"></span>
+                  Unwatch
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+            <div class="select-menu-item js-navigation-item " role="menuitem" tabindex="0">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <div class="select-menu-item-text">
+                <input id="do_ignore" name="do" type="radio" value="ignore" />
+                <h4>Ignoring</h4>
+                <span class="description">You do not receive any notifications for conversations in this repository.</span>
+                <span class="js-select-button-text hidden-select-button-text">
+                  <span class="octicon octicon-mute"></span>
+                  Stop ignoring
+                </span>
+              </div>
+            </div> <!-- /.select-menu-item -->
+
+          </div> <!-- /.select-menu-list -->
+
+        </div> <!-- /.select-menu-modal -->
+      </div> <!-- /.select-menu-modal-holder -->
+    </div> <!-- /.select-menu -->
+
+</form>
+    </li>
+
+  <li>
+  
+
+  <div class="js-toggler-container js-social-container starring-container ">
+    <a href="/marionettejs/backbone.marionette/unstar"
+      class="minibutton with-count js-toggler-target star-button starred upwards"
+      title="Unstar this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star-delete"></span><span class="text">Unstar</span>
+    </a>
+
+    <a href="/marionettejs/backbone.marionette/star"
+      class="minibutton with-count js-toggler-target star-button unstarred upwards"
+      title="Star this repository" data-remote="true" data-method="post" rel="nofollow">
+      <span class="octicon octicon-star"></span><span class="text">Star</span>
+    </a>
+
+      <a class="social-count js-social-count" href="/marionettejs/backbone.marionette/stargazers">
+        4,515
+      </a>
+  </div>
+
+  </li>
+
+
+        <li>
+          <a href="/marionettejs/backbone.marionette/fork" class="minibutton with-count js-toggler-target fork-button lighter upwards" title="Fork this repo" rel="facebox nofollow">
+            <span class="octicon octicon-git-branch-create"></span><span class="text">Fork</span>
+          </a>
+          <a href="/marionettejs/backbone.marionette/network" class="social-count">767</a>
+        </li>
+
+
+</ul>
+
+        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+          <span class="repo-label"><span>public</span></span>
+          <span class="mega-octicon octicon-repo"></span>
+          <span class="author">
+            <a href="/marionettejs" class="url fn" itemprop="url" rel="author"><span itemprop="title">marionettejs</span></a>
+          </span>
+          <span class="repohead-name-divider">/</span>
+          <strong><a href="/marionettejs/backbone.marionette" class="js-current-repository js-repo-home-link">backbone.marionette</a></strong>
+
+          <span class="page-context-loader">
+            <img alt="Octocat-spinner-32" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+          </span>
+
+        </h1>
+      </div><!-- /.container -->
+    </div><!-- /.repohead -->
+
+    <div class="container">
+      
+
+      <div class="repository-with-sidebar repo-container new-discussion-timeline js-new-discussion-timeline  ">
+        <div class="repository-sidebar clearfix">
+            
+
+<div class="sunken-menu vertical-right repo-nav js-repo-nav js-repository-container-pjax js-octicon-loaders">
+  <div class="sunken-menu-contents">
+    <ul class="sunken-menu-group">
+      <li class="tooltipped leftwards" aria-label="Code">
+        <a href="/marionettejs/backbone.marionette" aria-label="Code" class="selected js-selected-navigation-item sunken-menu-item" data-gotokey="c" data-pjax="true" data-selected-links="repo_source repo_downloads repo_commits repo_tags repo_branches /marionettejs/backbone.marionette">
+          <span class="octicon octicon-code"></span> <span class="full-word">Code</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+        <li class="tooltipped leftwards" aria-label="Issues">
+          <a href="/marionettejs/backbone.marionette/issues" aria-label="Issues" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="i" data-selected-links="repo_issues /marionettejs/backbone.marionette/issues">
+            <span class="octicon octicon-issue-opened"></span> <span class="full-word">Issues</span>
+            <span class='counter'>83</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+
+      <li class="tooltipped leftwards" aria-label="Pull Requests">
+        <a href="/marionettejs/backbone.marionette/pulls" aria-label="Pull Requests" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-gotokey="p" data-selected-links="repo_pulls /marionettejs/backbone.marionette/pulls">
+            <span class="octicon octicon-git-pull-request"></span> <span class="full-word">Pull Requests</span>
+            <span class='counter'>10</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+
+        <li class="tooltipped leftwards" aria-label="Wiki">
+          <a href="/marionettejs/backbone.marionette/wiki" aria-label="Wiki" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_wiki /marionettejs/backbone.marionette/wiki">
+            <span class="octicon octicon-book"></span> <span class="full-word">Wiki</span>
+            <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>        </li>
+    </ul>
+    <div class="sunken-menu-separator"></div>
+    <ul class="sunken-menu-group">
+
+      <li class="tooltipped leftwards" aria-label="Pulse">
+        <a href="/marionettejs/backbone.marionette/pulse" aria-label="Pulse" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="pulse /marionettejs/backbone.marionette/pulse">
+          <span class="octicon octicon-pulse"></span> <span class="full-word">Pulse</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Graphs">
+        <a href="/marionettejs/backbone.marionette/graphs" aria-label="Graphs" class="js-selected-navigation-item sunken-menu-item" data-pjax="true" data-selected-links="repo_graphs repo_contributors /marionettejs/backbone.marionette/graphs">
+          <span class="octicon octicon-graph"></span> <span class="full-word">Graphs</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+
+      <li class="tooltipped leftwards" aria-label="Network">
+        <a href="/marionettejs/backbone.marionette/network" aria-label="Network" class="js-selected-navigation-item sunken-menu-item js-disable-pjax" data-selected-links="repo_network /marionettejs/backbone.marionette/network">
+          <span class="octicon octicon-git-branch"></span> <span class="full-word">Network</span>
+          <img alt="Octocat-spinner-32" class="mini-loader" height="16" src="https://github.global.ssl.fastly.net/images/spinners/octocat-spinner-32.gif" width="16" />
+</a>      </li>
+    </ul>
+
+
+  </div>
+</div>
+
+              <div class="only-with-full-nav">
+                
+
+  
+
+<div class="clone-url open"
+  data-protocol-type="http"
+  data-url="/users/set_protocol?protocol_selector=http&amp;protocol_type=clone">
+  <h3><strong>HTTPS</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/marionettejs/backbone.marionette.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/marionettejs/backbone.marionette.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="ssh"
+  data-url="/users/set_protocol?protocol_selector=ssh&amp;protocol_type=clone">
+  <h3><strong>SSH</strong> clone URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="git@github.com:marionettejs/backbone.marionette.git" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="git@github.com:marionettejs/backbone.marionette.git" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+  
+
+<div class="clone-url "
+  data-protocol-type="subversion"
+  data-url="/users/set_protocol?protocol_selector=subversion&amp;protocol_type=clone">
+  <h3><strong>Subversion</strong> checkout URL</h3>
+  <div class="clone-url-box">
+    <input type="text" class="clone js-url-field"
+           value="https://github.com/marionettejs/backbone.marionette" readonly="readonly">
+
+    <span class="js-zeroclipboard url-box-clippy minibutton zeroclipboard-button" data-clipboard-text="https://github.com/marionettejs/backbone.marionette" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+<p class="clone-options">You can clone with
+      <a href="#" class="js-clone-selector" data-protocol="http">HTTPS</a>,
+      <a href="#" class="js-clone-selector" data-protocol="ssh">SSH</a>,
+      or <a href="#" class="js-clone-selector" data-protocol="subversion">Subversion</a>.
+  <span class="octicon help tooltipped upwards" aria-label="Get help on which URL is right for you.">
+    <a href="https://help.github.com/articles/which-remote-url-should-i-use">
+    <span class="octicon octicon-question"></span>
+    </a>
+  </span>
+</p>
+
+
+  <a href="github-windows://openRepo/https://github.com/marionettejs/backbone.marionette" class="minibutton sidebar-button">
+    <span class="octicon octicon-device-desktop"></span>
+    Clone in Desktop
+  </a>
+
+                <a href="/marionettejs/backbone.marionette/archive/master.zip"
+                   class="minibutton sidebar-button"
+                   title="Download this repository as a zip file"
+                   rel="nofollow">
+                  <span class="octicon octicon-cloud-download"></span>
+                  Download ZIP
+                </a>
+              </div>
+        </div><!-- /.repository-sidebar -->
+
+        <div id="js-repo-pjax-container" class="repository-content context-loader-container" data-pjax-container>
+          
+
+
+<!-- blob contrib key: blob_contributors:v21:f9b9729c4db4e836425d24b7fedbac7a -->
+
+<p title="This is a placeholder element" class="js-history-link-replace hidden"></p>
+
+<a href="/marionettejs/backbone.marionette/find/master" data-pjax data-hotkey="t" class="js-show-file-finder" style="display:none">Show File Finder</a>
+
+<div class="file-navigation">
+  
+
+<div class="select-menu js-menu-container js-select-menu" >
+  <span class="minibutton select-menu-button js-menu-target" data-hotkey="w"
+    data-master-branch="master"
+    data-ref="master"
+    role="button" aria-label="Switch branches or tags" tabindex="0">
+    <span class="octicon octicon-git-branch"></span>
+    <i>branch:</i>
+    <span class="js-select-button">master</span>
+  </span>
+
+  <div class="select-menu-modal-holder js-menu-content js-navigation-container" data-pjax>
+
+    <div class="select-menu-modal">
+      <div class="select-menu-header">
+        <span class="select-menu-title">Switch branches/tags</span>
+        <span class="octicon octicon-remove-close js-menu-close"></span>
+      </div> <!-- /.select-menu-header -->
+
+      <div class="select-menu-filters">
+        <div class="select-menu-text-filter">
+          <input type="text" aria-label="Filter branches/tags" id="context-commitish-filter-field" class="js-filterable-field js-navigation-enable" placeholder="Filter branches/tags">
+        </div>
+        <div class="select-menu-tabs">
+          <ul>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="branches" class="js-select-menu-tab">Branches</a>
+            </li>
+            <li class="select-menu-tab">
+              <a href="#" data-tab-filter="tags" class="js-select-menu-tab">Tags</a>
+            </li>
+          </ul>
+        </div><!-- /.select-menu-tabs -->
+      </div><!-- /.select-menu-filters -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="branches">
+
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/dev/lib/backbone.marionette.map"
+                 data-name="dev"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="dev">dev</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item selected">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/master/lib/backbone.marionette.map"
+                 data-name="master"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="master">master</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/sjs/behaviors/lib/backbone.marionette.map"
+                 data-name="sjs/behaviors"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="sjs/behaviors">sjs/behaviors</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/sjs/ui-events-and-triggers-coverage/lib/backbone.marionette.map"
+                 data-name="sjs/ui-events-and-triggers-coverage"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="sjs/ui-events-and-triggers-coverage">sjs/ui-events-and-triggers-coverage</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/testAllThejQueries/lib/backbone.marionette.map"
+                 data-name="testAllThejQueries"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="testAllThejQueries">testAllThejQueries</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/v1.4.0beta/lib/backbone.marionette.map"
+                 data-name="v1.4.0beta"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.4.0beta">v1.4.0beta</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/blob/v.2.0.0-dev/lib/backbone.marionette.map"
+                 data-name="v.2.0.0-dev"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v.2.0.0-dev">v.2.0.0-dev</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+          <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+      <div class="select-menu-list select-menu-tab-bucket js-select-menu-tab-bucket" data-tab-filter="tags">
+        <div data-filterable-for="context-commitish-filter-field" data-filterable-type="substring">
+
+
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.6.2/lib/backbone.marionette.map"
+                 data-name="v1.6.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.6.2">v1.6.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.6.1/lib/backbone.marionette.map"
+                 data-name="v1.6.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.6.1">v1.6.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.6.0/lib/backbone.marionette.map"
+                 data-name="v1.6.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.6.0">v1.6.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.5.1/lib/backbone.marionette.map"
+                 data-name="v1.5.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.5.1">v1.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.5.0/lib/backbone.marionette.map"
+                 data-name="v1.5.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.5.0">v1.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.4.1/lib/backbone.marionette.map"
+                 data-name="v1.4.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.4.1">v1.4.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.4.0beta/lib/backbone.marionette.map"
+                 data-name="v1.4.0beta"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.4.0beta">v1.4.0beta</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.4.0/lib/backbone.marionette.map"
+                 data-name="v1.4.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.4.0">v1.4.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.3.0/lib/backbone.marionette.map"
+                 data-name="v1.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.3.0">v1.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.2.3/lib/backbone.marionette.map"
+                 data-name="v1.2.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.2.3">v1.2.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.2.2/lib/backbone.marionette.map"
+                 data-name="v1.2.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.2.2">v1.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.2.1/lib/backbone.marionette.map"
+                 data-name="v1.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.2.1">v1.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.2.0/lib/backbone.marionette.map"
+                 data-name="v1.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.2.0">v1.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.1.0/lib/backbone.marionette.map"
+                 data-name="v1.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.1.0">v1.1.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.4/lib/backbone.marionette.map"
+                 data-name="v1.0.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.4">v1.0.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.3/lib/backbone.marionette.map"
+                 data-name="v1.0.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.3">v1.0.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.2/lib/backbone.marionette.map"
+                 data-name="v1.0.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.2">v1.0.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.1/lib/backbone.marionette.map"
+                 data-name="v1.0.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.1">v1.0.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc6/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc6">v1.0.0-rc6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc5/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc5">v1.0.0-rc5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc4/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc4">v1.0.0-rc4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc3/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc3">v1.0.0-rc3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc2/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc2">v1.0.0-rc2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-rc1/lib/backbone.marionette.map"
+                 data-name="v1.0.0-rc1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-rc1">v1.0.0-rc1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta6/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta6">v1.0.0-beta6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta5/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta5">v1.0.0-beta5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta4/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta4">v1.0.0-beta4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta3/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta3">v1.0.0-beta3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta2/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta2">v1.0.0-beta2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0-beta1/lib/backbone.marionette.map"
+                 data-name="v1.0.0-beta1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0-beta1">v1.0.0-beta1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v1.0.0/lib/backbone.marionette.map"
+                 data-name="v1.0.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v1.0.0">v1.0.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.10.2/lib/backbone.marionette.map"
+                 data-name="v0.10.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.10.2">v0.10.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.10.1/lib/backbone.marionette.map"
+                 data-name="v0.10.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.10.1">v0.10.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.10.0/lib/backbone.marionette.map"
+                 data-name="v0.10.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.10.0">v0.10.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.13/lib/backbone.marionette.map"
+                 data-name="v0.9.13"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.13">v0.9.13</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.12/lib/backbone.marionette.map"
+                 data-name="v0.9.12"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.12">v0.9.12</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.11/lib/backbone.marionette.map"
+                 data-name="v0.9.11"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.11">v0.9.11</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.10/lib/backbone.marionette.map"
+                 data-name="v0.9.10"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.10">v0.9.10</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.9/lib/backbone.marionette.map"
+                 data-name="v0.9.9"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.9">v0.9.9</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.8/lib/backbone.marionette.map"
+                 data-name="v0.9.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.8">v0.9.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.7/lib/backbone.marionette.map"
+                 data-name="v0.9.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.7">v0.9.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.6/lib/backbone.marionette.map"
+                 data-name="v0.9.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.6">v0.9.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.5/lib/backbone.marionette.map"
+                 data-name="v0.9.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.5">v0.9.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.4/lib/backbone.marionette.map"
+                 data-name="v0.9.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.4">v0.9.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.3/lib/backbone.marionette.map"
+                 data-name="v0.9.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.3">v0.9.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.2/lib/backbone.marionette.map"
+                 data-name="v0.9.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.2">v0.9.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.1/lib/backbone.marionette.map"
+                 data-name="v0.9.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.1">v0.9.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.9.0/lib/backbone.marionette.map"
+                 data-name="v0.9.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.9.0">v0.9.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.8.4/lib/backbone.marionette.map"
+                 data-name="v0.8.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.8.4">v0.8.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.8.3/lib/backbone.marionette.map"
+                 data-name="v0.8.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.8.3">v0.8.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.8.2/lib/backbone.marionette.map"
+                 data-name="v0.8.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.8.2">v0.8.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.8.1/lib/backbone.marionette.map"
+                 data-name="v0.8.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.8.1">v0.8.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.8.0/lib/backbone.marionette.map"
+                 data-name="v0.8.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.8.0">v0.8.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.6/lib/backbone.marionette.map"
+                 data-name="v0.7.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.6">v0.7.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.5/lib/backbone.marionette.map"
+                 data-name="v0.7.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.5">v0.7.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.4/lib/backbone.marionette.map"
+                 data-name="v0.7.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.4">v0.7.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.3/lib/backbone.marionette.map"
+                 data-name="v0.7.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.3">v0.7.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.2/lib/backbone.marionette.map"
+                 data-name="v0.7.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.2">v0.7.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.1/lib/backbone.marionette.map"
+                 data-name="v0.7.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.1">v0.7.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.7.0/lib/backbone.marionette.map"
+                 data-name="v0.7.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.7.0">v0.7.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.6.3/lib/backbone.marionette.map"
+                 data-name="v0.6.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.6.3">v0.6.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.6.2/lib/backbone.marionette.map"
+                 data-name="v0.6.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.6.2">v0.6.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.6.1/lib/backbone.marionette.map"
+                 data-name="v0.6.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.6.1">v0.6.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.6.0/lib/backbone.marionette.map"
+                 data-name="v0.6.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.6.0">v0.6.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.5.2/lib/backbone.marionette.map"
+                 data-name="v0.5.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.5.2">v0.5.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.5.1/lib/backbone.marionette.map"
+                 data-name="v0.5.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.5.1">v0.5.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.5.0/lib/backbone.marionette.map"
+                 data-name="v0.5.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.5.0">v0.5.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.8/lib/backbone.marionette.map"
+                 data-name="v0.4.8"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.8">v0.4.8</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.7/lib/backbone.marionette.map"
+                 data-name="v0.4.7"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.7">v0.4.7</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.6/lib/backbone.marionette.map"
+                 data-name="v0.4.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.6">v0.4.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.5/lib/backbone.marionette.map"
+                 data-name="v0.4.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.5">v0.4.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.4/lib/backbone.marionette.map"
+                 data-name="v0.4.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.4">v0.4.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.3/lib/backbone.marionette.map"
+                 data-name="v0.4.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.3">v0.4.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.2/lib/backbone.marionette.map"
+                 data-name="v0.4.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.2">v0.4.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.1a/lib/backbone.marionette.map"
+                 data-name="v0.4.1a"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.1a">v0.4.1a</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.1/lib/backbone.marionette.map"
+                 data-name="v0.4.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.1">v0.4.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.4.0/lib/backbone.marionette.map"
+                 data-name="v0.4.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.4.0">v0.4.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.3.1/lib/backbone.marionette.map"
+                 data-name="v0.3.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.3.1">v0.3.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.3.0/lib/backbone.marionette.map"
+                 data-name="v0.3.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.3.0">v0.3.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.6/lib/backbone.marionette.map"
+                 data-name="v0.2.6"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.6">v0.2.6</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.5/lib/backbone.marionette.map"
+                 data-name="v0.2.5"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.5">v0.2.5</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.4/lib/backbone.marionette.map"
+                 data-name="v0.2.4"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.4">v0.2.4</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.3/lib/backbone.marionette.map"
+                 data-name="v0.2.3"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.3">v0.2.3</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.2/lib/backbone.marionette.map"
+                 data-name="v0.2.2"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.2">v0.2.2</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.1/lib/backbone.marionette.map"
+                 data-name="v0.2.1"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.1">v0.2.1</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.2.0/lib/backbone.marionette.map"
+                 data-name="v0.2.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.2.0">v0.2.0</a>
+            </div> <!-- /.select-menu-item -->
+            <div class="select-menu-item js-navigation-item ">
+              <span class="select-menu-item-icon octicon octicon-check"></span>
+              <a href="/marionettejs/backbone.marionette/tree/v0.1.0/lib/backbone.marionette.map"
+                 data-name="v0.1.0"
+                 data-skip-pjax="true"
+                 rel="nofollow"
+                 class="js-navigation-open select-menu-item-text js-select-button-text css-truncate-target"
+                 title="v0.1.0">v0.1.0</a>
+            </div> <!-- /.select-menu-item -->
+        </div>
+
+        <div class="select-menu-no-results">Nothing to show</div>
+      </div> <!-- /.select-menu-list -->
+
+    </div> <!-- /.select-menu-modal -->
+  </div> <!-- /.select-menu-modal-holder -->
+</div> <!-- /.select-menu -->
+
+  <div class="breadcrumb">
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/marionettejs/backbone.marionette" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">backbone.marionette</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/marionettejs/backbone.marionette/tree/master/lib" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">lib</span></a></span><span class="separator"> / </span><strong class="final-path">backbone.marionette.map</strong> <span class="js-zeroclipboard minibutton zeroclipboard-button" data-clipboard-text="lib/backbone.marionette.map" data-copied-hint="copied!" title="copy to clipboard"><span class="octicon octicon-clippy"></span></span>
+  </div>
+</div>
+
+
+  <div class="commit file-history-tease">
+    <img alt="Sam Saccone" class="main-avatar js-avatar" data-user="883126" height="24" src="https://1.gravatar.com/avatar/41041169880bec75fbe51de48443cefb?d=https%3A%2F%2Fidenticons.github.com%2Fc0c98694801d7542dc300536345226b9.png&amp;r=x&amp;s=140" width="24" />
+    <span class="author"><a href="/samccone" rel="author">samccone</a></span>
+    <time class="js-relative-date" data-title-format="YYYY-MM-DD HH:mm:ss" datetime="2014-02-07T11:34:21-08:00" title="2014-02-07 11:34:21">February 07, 2014</time>
+    <div class="commit-title">
+        <a href="/marionettejs/backbone.marionette/commit/77755a8fd6dd759a4b2c750db1cc70a9187a9652" class="message" data-pjax="true" title="bump and build [v1.6.2]">bump and build [v1.6.2]</a>
+    </div>
+
+    <div class="participation">
+      <p class="quickstat"><a href="#blob_contributors_box" rel="facebox"><strong>4</strong> contributors</a></p>
+          <a class="avatar tooltipped downwards" aria-label="derickbailey" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.map?author=derickbailey"><img alt="Derick Bailey" class=" js-avatar" data-user="75190" height="20" src="https://1.gravatar.com/avatar/e592bd1326b1e80188ed4c0bf26b9f75?d=https%3A%2F%2Fidenticons.github.com%2Fc551b3e48358cd66c83315c5a357cc69.png&amp;r=x&amp;s=140" width="20" /></a>
+    <a class="avatar tooltipped downwards" aria-label="samccone" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.map?author=samccone"><img alt="Sam Saccone" class=" js-avatar" data-user="883126" height="20" src="https://1.gravatar.com/avatar/41041169880bec75fbe51de48443cefb?d=https%3A%2F%2Fidenticons.github.com%2Fc0c98694801d7542dc300536345226b9.png&amp;r=x&amp;s=140" width="20" /></a>
+    <a class="avatar tooltipped downwards" aria-label="jsoverson" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.map?author=jsoverson"><img alt="Jarrod Overson" class=" js-avatar" data-user="842798" height="20" src="https://0.gravatar.com/avatar/74be2e435d69a5827de7b5d33e7b343d?d=https%3A%2F%2Fidenticons.github.com%2F8014cdaf1d23b7d3a6aa381c02ebac9b.png&amp;r=x&amp;s=140" width="20" /></a>
+    <a class="avatar tooltipped downwards" aria-label="brianmann" href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.map?author=brianmann"><img alt="brianmann" class=" js-avatar" data-user="1145387" height="20" src="https://2.gravatar.com/avatar/f3ccc3b979505c8003907e6b37e4b860?d=https%3A%2F%2Fidenticons.github.com%2F468cdb92bb2e2e4462e7562deee302ad.png&amp;r=x&amp;s=140" width="20" /></a>
+
+
+    </div>
+    <div id="blob_contributors_box" style="display:none">
+      <h2 class="facebox-header">Users who have contributed to this file</h2>
+      <ul class="facebox-user-list">
+          <li class="facebox-user-list-item">
+            <img alt="Derick Bailey" class=" js-avatar" data-user="75190" height="24" src="https://1.gravatar.com/avatar/e592bd1326b1e80188ed4c0bf26b9f75?d=https%3A%2F%2Fidenticons.github.com%2Fc551b3e48358cd66c83315c5a357cc69.png&amp;r=x&amp;s=140" width="24" />
+            <a href="/derickbailey">derickbailey</a>
+          </li>
+          <li class="facebox-user-list-item">
+            <img alt="Sam Saccone" class=" js-avatar" data-user="883126" height="24" src="https://1.gravatar.com/avatar/41041169880bec75fbe51de48443cefb?d=https%3A%2F%2Fidenticons.github.com%2Fc0c98694801d7542dc300536345226b9.png&amp;r=x&amp;s=140" width="24" />
+            <a href="/samccone">samccone</a>
+          </li>
+          <li class="facebox-user-list-item">
+            <img alt="Jarrod Overson" class=" js-avatar" data-user="842798" height="24" src="https://0.gravatar.com/avatar/74be2e435d69a5827de7b5d33e7b343d?d=https%3A%2F%2Fidenticons.github.com%2F8014cdaf1d23b7d3a6aa381c02ebac9b.png&amp;r=x&amp;s=140" width="24" />
+            <a href="/jsoverson">jsoverson</a>
+          </li>
+          <li class="facebox-user-list-item">
+            <img alt="brianmann" class=" js-avatar" data-user="1145387" height="24" src="https://2.gravatar.com/avatar/f3ccc3b979505c8003907e6b37e4b860?d=https%3A%2F%2Fidenticons.github.com%2F468cdb92bb2e2e4462e7562deee302ad.png&amp;r=x&amp;s=140" width="24" />
+            <a href="/brianmann">brianmann</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="file-box">
+  <div class="file">
+    <div class="meta clearfix">
+      <div class="info file-name">
+        <span class="icon"><b class="octicon octicon-file-text"></b></span>
+        <span class="mode" title="File Mode">file</span>
+        <span class="meta-divider"></span>
+          <span>1 lines (1 sloc)</span>
+          <span class="meta-divider"></span>
+        <span>30.691 kb</span>
+      </div>
+      <div class="actions">
+        <div class="button-group">
+            <a class="minibutton tooltipped leftwards"
+               href="github-windows://openRepo/https://github.com/marionettejs/backbone.marionette?branch=master&amp;filepath=lib%2Fbackbone.marionette.map" aria-label="Open this file in GitHub for Windows">
+                <span class="octicon octicon-device-desktop"></span> Open
+            </a>
+                <a class="minibutton tooltipped upwards js-update-url-with-hash"
+                   aria-label="Clicking this button will automatically fork this project so you can edit the file"
+                   href="/marionettejs/backbone.marionette/edit/master/lib/backbone.marionette.map"
+                   data-method="post" rel="nofollow">Edit</a>
+          <a href="/marionettejs/backbone.marionette/raw/master/lib/backbone.marionette.map" class="button minibutton " id="raw-url">Raw</a>
+            <a href="/marionettejs/backbone.marionette/blame/master/lib/backbone.marionette.map" class="button minibutton js-update-url-with-hash">Blame</a>
+          <a href="/marionettejs/backbone.marionette/commits/master/lib/backbone.marionette.map" class="button minibutton " rel="nofollow">History</a>
+        </div><!-- /.button-group -->
+          <a class="minibutton danger empty-icon tooltipped downwards"
+             href="/marionettejs/backbone.marionette/delete/master/lib/backbone.marionette.map"
+             aria-label="Fork this project and delete file"
+             data-method="post" data-test-id="delete-blob-file" rel="nofollow">
+          Delete
+        </a>
+      </div><!-- /.actions -->
+    </div>
+        <div class="blob-wrapper data type-text js-blob-data">
+        <table class="file-code file-diff tab-size-8">
+          <tr class="file-code-line">
+            <td class="blob-line-nums">
+              <span id="L1" rel="#L1">1</span>
+
+            </td>
+            <td class="blob-line-code"><div class="code-body highlight"><pre><div class='line' id='LC1'>{&quot;version&quot;:3,&quot;file&quot;:&quot;lib/backbone.marionette.min.js&quot;,&quot;sources&quot;:[&quot;backbone.marionette.js&quot;],&quot;names&quot;:[&quot;Backbone&quot;,&quot;ChildViewContainer&quot;,&quot;_&quot;,&quot;Container&quot;,&quot;views&quot;,&quot;this&quot;,&quot;_views&quot;,&quot;_indexByModel&quot;,&quot;_indexByCustom&quot;,&quot;_updateLength&quot;,&quot;each&quot;,&quot;add&quot;,&quot;extend&quot;,&quot;prototype&quot;,&quot;view&quot;,&quot;customIndex&quot;,&quot;viewCid&quot;,&quot;cid&quot;,&quot;model&quot;,&quot;findByModel&quot;,&quot;findByModelCid&quot;,&quot;modelCid&quot;,&quot;findByCid&quot;,&quot;findByCustom&quot;,&quot;index&quot;,&quot;findByIndex&quot;,&quot;values&quot;,&quot;remove&quot;,&quot;any&quot;,&quot;key&quot;,&quot;call&quot;,&quot;method&quot;,&quot;apply&quot;,&quot;tail&quot;,&quot;arguments&quot;,&quot;args&quot;,&quot;isFunction&quot;,&quot;length&quot;,&quot;size&quot;,&quot;methods&quot;,&quot;concat&quot;,&quot;toArray&quot;,&quot;Wreqr&quot;,&quot;Marionette&quot;,&quot;Handlers&quot;,&quot;options&quot;,&quot;_wreqrHandlers&quot;,&quot;initialize&quot;,&quot;Model&quot;,&quot;Events&quot;,&quot;setHandlers&quot;,&quot;handlers&quot;,&quot;handler&quot;,&quot;name&quot;,&quot;context&quot;,&quot;isObject&quot;,&quot;callback&quot;,&quot;setHandler&quot;,&quot;config&quot;,&quot;trigger&quot;,&quot;hasHandler&quot;,&quot;getHandler&quot;,&quot;Error&quot;,&quot;Array&quot;,&quot;slice&quot;,&quot;removeHandler&quot;,&quot;removeAllHandlers&quot;,&quot;CommandStorage&quot;,&quot;_commands&quot;,&quot;getCommands&quot;,&quot;commandName&quot;,&quot;commands&quot;,&quot;command&quot;,&quot;instances&quot;,&quot;addCommand&quot;,&quot;push&quot;,&quot;clearCommands&quot;,&quot;Commands&quot;,&quot;storageType&quot;,&quot;constructor&quot;,&quot;_initializeStorage&quot;,&quot;on&quot;,&quot;_executeCommands&quot;,&quot;execute&quot;,&quot;storage&quot;,&quot;StorageType&quot;,&quot;RequestResponse&quot;,&quot;request&quot;,&quot;EventAggregator&quot;,&quot;EA&quot;,&quot;global&quot;,&quot;protoSlice&quot;,&quot;throwError&quot;,&quot;message&quot;,&quot;error&quot;,&quot;$&quot;,&quot;getOption&quot;,&quot;target&quot;,&quot;optionName&quot;,&quot;value&quot;,&quot;undefined&quot;,&quot;normalizeMethods&quot;,&quot;hash&quot;,&quot;normalizedHash&quot;,&quot;fn&quot;,&quot;triggerMethod&quot;,&quot;getEventName&quot;,&quot;match&quot;,&quot;prefix&quot;,&quot;eventName&quot;,&quot;toUpperCase&quot;,&quot;splitter&quot;,&quot;event&quot;,&quot;methodName&quot;,&quot;replace&quot;,&quot;MonitorDOMRefresh&quot;,&quot;documentElement&quot;,&quot;handleShow&quot;,&quot;_isShown&quot;,&quot;triggerDOMRefresh&quot;,&quot;handleRender&quot;,&quot;_isRendered&quot;,&quot;isInDOM&quot;,&quot;contains&quot;,&quot;el&quot;,&quot;listenTo&quot;,&quot;document&quot;,&quot;bindFromStrings&quot;,&quot;entity&quot;,&quot;evt&quot;,&quot;methodNames&quot;,&quot;split&quot;,&quot;bindToFunction&quot;,&quot;unbindFromStrings&quot;,&quot;stopListening&quot;,&quot;unbindToFunction&quot;,&quot;iterateEvents&quot;,&quot;bindings&quot;,&quot;functionCallback&quot;,&quot;stringCallback&quot;,&quot;bindEntityEvents&quot;,&quot;unbindEntityEvents&quot;,&quot;Callbacks&quot;,&quot;_deferred&quot;,&quot;Deferred&quot;,&quot;_callbacks&quot;,&quot;contextOverride&quot;,&quot;cb&quot;,&quot;ctx&quot;,&quot;done&quot;,&quot;run&quot;,&quot;resolve&quot;,&quot;reset&quot;,&quot;callbacks&quot;,&quot;Controller&quot;,&quot;close&quot;,&quot;unbind&quot;,&quot;Region&quot;,&quot;err&quot;,&quot;buildRegion&quot;,&quot;regionConfig&quot;,&quot;defaultRegionType&quot;,&quot;regionIsString&quot;,&quot;regionSelectorIsString&quot;,&quot;selector&quot;,&quot;regionTypeIsUndefined&quot;,&quot;regionType&quot;,&quot;regionIsType&quot;,&quot;RegionType&quot;,&quot;region&quot;,&quot;parentEl&quot;,&quot;getEl&quot;,&quot;find&quot;,&quot;show&quot;,&quot;ensureEl&quot;,&quot;isViewClosed&quot;,&quot;isClosed&quot;,&quot;isUndefined&quot;,&quot;$el&quot;,&quot;isDifferentView&quot;,&quot;currentView&quot;,&quot;render&quot;,&quot;open&quot;,&quot;empty&quot;,&quot;append&quot;,&quot;attachView&quot;,&quot;RegionManager&quot;,&quot;_regions&quot;,&quot;addRegions&quot;,&quot;regionDefinitions&quot;,&quot;defaults&quot;,&quot;regions&quot;,&quot;definition&quot;,&quot;addRegion&quot;,&quot;isString&quot;,&quot;hasSelector&quot;,&quot;_store&quot;,&quot;get&quot;,&quot;removeRegion&quot;,&quot;_remove&quot;,&quot;removeRegions&quot;,&quot;closeRegions&quot;,&quot;_setLength&quot;,&quot;TemplateCache&quot;,&quot;templateId&quot;,&quot;templateCaches&quot;,&quot;cachedTemplate&quot;,&quot;load&quot;,&quot;clear&quot;,&quot;i&quot;,&quot;compiledTemplate&quot;,&quot;template&quot;,&quot;loadTemplate&quot;,&quot;compileTemplate&quot;,&quot;html&quot;,&quot;rawTemplate&quot;,&quot;Renderer&quot;,&quot;data&quot;,&quot;templateFunc&quot;,&quot;View&quot;,&quot;bindAll&quot;,&quot;result&quot;,&quot;events&quot;,&quot;normalizeUIKeys&quot;,&quot;onShowCalled&quot;,&quot;getTemplate&quot;,&quot;mixinTemplateHelpers&quot;,&quot;templateHelpers&quot;,&quot;keys&quot;,&quot;v&quot;,&quot;ui&quot;,&quot;configureTriggers&quot;,&quot;triggers&quot;,&quot;triggerEvents&quot;,&quot;hasOptions&quot;,&quot;e&quot;,&quot;prevent&quot;,&quot;preventDefault&quot;,&quot;stop&quot;,&quot;stopPropagation&quot;,&quot;shouldPrevent&quot;,&quot;shouldStop&quot;,&quot;collection&quot;,&quot;delegateEvents&quot;,&quot;_delegateDOMEvents&quot;,&quot;combinedEvents&quot;,&quot;undelegateEvents&quot;,&quot;shouldClose&quot;,&quot;unbindUIElements&quot;,&quot;bindUIElements&quot;,&quot;_uiBindings&quot;,&quot;ItemView&quot;,&quot;serializeData&quot;,&quot;toJSON&quot;,&quot;items&quot;,&quot;CollectionView&quot;,&quot;itemViewEventPrefix&quot;,&quot;_initChildViewStorage&quot;,&quot;_initialEvents&quot;,&quot;initRenderBuffer&quot;,&quot;elBuffer&quot;,&quot;createDocumentFragment&quot;,&quot;_bufferedChildren&quot;,&quot;startBuffering&quot;,&quot;isBuffering&quot;,&quot;endBuffering&quot;,&quot;appendBuffer&quot;,&quot;_triggerShowBufferedChildren&quot;,&quot;child&quot;,&quot;addChildView&quot;,&quot;removeItemView&quot;,&quot;item&quot;,&quot;closeEmptyView&quot;,&quot;getItemView&quot;,&quot;indexOf&quot;,&quot;addItemView&quot;,&quot;children&quot;,&quot;triggerBeforeRender&quot;,&quot;triggerRendered&quot;,&quot;_renderChildren&quot;,&quot;closeChildren&quot;,&quot;isEmpty&quot;,&quot;showEmptyView&quot;,&quot;showCollection&quot;,&quot;EmptyView&quot;,&quot;getEmptyView&quot;,&quot;_showingEmptyView&quot;,&quot;itemView&quot;,&quot;itemViewOptions&quot;,&quot;buildItemView&quot;,&quot;addChildViewEventForwarding&quot;,&quot;renderItemView&quot;,&quot;rootEvent&quot;,&quot;itemEvents&quot;,&quot;getItemEvents&quot;,&quot;splice&quot;,&quot;appendHtml&quot;,&quot;ItemViewType&quot;,&quot;removeChildView&quot;,&quot;checkEmpty&quot;,&quot;collectionView&quot;,&quot;buffer&quot;,&quot;appendChild&quot;,&quot;CompositeView&quot;,&quot;once&quot;,&quot;isRendered&quot;,&quot;resetItemViewContainer&quot;,&quot;renderModel&quot;,&quot;compositeView&quot;,&quot;$container&quot;,&quot;getItemViewContainer&quot;,&quot;containerView&quot;,&quot;$itemViewContainer&quot;,&quot;container&quot;,&quot;itemViewContainer&quot;,&quot;Layout&quot;,&quot;_firstRender&quot;,&quot;_initializeRegions&quot;,&quot;_reInitializeRegions&quot;,&quot;regionManager&quot;,&quot;_buildRegions&quot;,&quot;that&quot;,&quot;_initRegionManager&quot;,&quot;AppRouter&quot;,&quot;Router&quot;,&quot;appRoutes&quot;,&quot;controller&quot;,&quot;_getController&quot;,&quot;processAppRoutes&quot;,&quot;appRoute&quot;,&quot;route&quot;,&quot;_addAppRoute&quot;,&quot;routeNames&quot;,&quot;reverse&quot;,&quot;bind&quot;,&quot;Application&quot;,&quot;_initCallbacks&quot;,&quot;vent&quot;,&quot;reqres&quot;,&quot;submodules&quot;,&quot;addInitializer&quot;,&quot;initializer&quot;,&quot;start&quot;,&quot;_regionManager&quot;,&quot;getRegion&quot;,&quot;module&quot;,&quot;moduleNames&quot;,&quot;moduleDefinition&quot;,&quot;ModuleClass&quot;,&quot;Module&quot;,&quot;moduleClass&quot;,&quot;unshift&quot;,&quot;create&quot;,&quot;moduleName&quot;,&quot;app&quot;,&quot;_setupInitializersAndFinalizers&quot;,&quot;startWithParent&quot;,&quot;_initializerCallbacks&quot;,&quot;addFinalizer&quot;,&quot;_finalizerCallbacks&quot;,&quot;_isInitialized&quot;,&quot;mod&quot;,&quot;addDefinition&quot;,&quot;customArgs&quot;,&quot;_runModuleDefinition&quot;,&quot;flatten&quot;,&quot;moduleDefinitions&quot;,&quot;parentModule&quot;,&quot;_getModule&quot;,&quot;_addModuleDefinition&quot;,&quot;def&quot;,&quot;define&quot;,&quot;startWithParentIsConfigured&quot;],&quot;mappings&quot;:&quot;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&quot;}</div></pre></div></td>
+          </tr>
+        </table>
+  </div>
+
+  </div>
+</div>
+
+<a href="#jump-to-line" rel="facebox[.linejump]" data-hotkey="l" class="js-jump-to-line" style="display:none">Jump to Line</a>
+<div id="jump-to-line" style="display:none">
+  <form accept-charset="UTF-8" class="js-jump-to-line-form">
+    <input class="linejump-input js-jump-to-line-field" type="text" placeholder="Jump to line&hellip;" autofocus>
+    <button type="submit" class="button">Go</button>
+  </form>
+</div>
+
+        </div>
+
+      </div><!-- /.repo-container -->
+      <div class="modal-backdrop"></div>
+    </div><!-- /.container -->
+  </div><!-- /.site -->
+
+
+    </div><!-- /.wrapper -->
+
+      <div class="container">
+  <div class="site-footer">
+    <ul class="site-footer-links right">
+      <li><a href="https://status.github.com/">Status</a></li>
+      <li><a href="http://developer.github.com">API</a></li>
+      <li><a href="http://training.github.com">Training</a></li>
+      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/about">About</a></li>
+
+    </ul>
+
+    <a href="/">
+      <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+    </a>
+
+    <ul class="site-footer-links">
+      <li>&copy; 2014 <span title="0.05586s from github-fe137-cp1-prd.iad.github.net">GitHub</span>, Inc.</li>
+        <li><a href="/site/terms">Terms</a></li>
+        <li><a href="/site/privacy">Privacy</a></li>
+        <li><a href="/security">Security</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+  </div><!-- /.site-footer -->
+</div><!-- /.container -->
+
+
+    <div class="fullscreen-overlay js-fullscreen-overlay" id="fullscreen_overlay">
+  <div class="fullscreen-container js-fullscreen-container">
+    <div class="textarea-wrap">
+      <textarea name="fullscreen-contents" id="fullscreen-contents" class="js-fullscreen-contents" placeholder="" data-suggester="fullscreen_suggester"></textarea>
+          <div class="suggester-container">
+              <div class="suggester fullscreen-suggester js-navigation-container" id="fullscreen_suggester"
+                 data-url="/marionettejs/backbone.marionette/suggestions/commit">
+              </div>
+          </div>
+    </div>
+  </div>
+  <div class="fullscreen-sidebar">
+    <a href="#" class="exit-fullscreen js-exit-fullscreen tooltipped leftwards" aria-label="Exit Zen Mode">
+      <span class="mega-octicon octicon-screen-normal"></span>
+    </a>
+    <a href="#" class="theme-switcher js-theme-switcher tooltipped leftwards"
+      aria-label="Switch themes">
+      <span class="octicon octicon-color-mode"></span>
+    </a>
+  </div>
+</div>
+
+
+
+    <div id="ajax-error-message" class="flash flash-error">
+      <span class="octicon octicon-alert"></span>
+      <a href="#" class="octicon octicon-remove-close close js-ajax-error-dismiss"></a>
+      Something went wrong with that request. Please try again.
+    </div>
+
+  </body>
+</html>
+
