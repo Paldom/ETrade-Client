@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define, window, alert */
+/*global define, window, alert, App */
 
 define(function (require) {
 
@@ -25,14 +25,15 @@ define(function (require) {
         },
 
         initialize: function () {
+            this.settingsLocation = "station/options";
             this.bindUIElements();
         },
 
         onRender: function (that) {
         },
         
-        setTitle: function (titleText) {
-            this.ui.title.text(titleText);
+        setTitle: function (titleString) {
+            this.ui.title.text(titleString);
         },
                                                                             
         enableBack: function (isEnabled) {
@@ -50,6 +51,10 @@ define(function (require) {
                 this.ui.settingsBox.hide();
             }
         },
+        
+        setSettingsLocation: function (locationString) {
+            this.settingLocation = locationString;
+        },
 
         events: {
             'tap #btnBack': 'back',
@@ -61,7 +66,7 @@ define(function (require) {
         },
         
         settings: function () {
-            alert("Settings clicked");
+            App.navigate("#/" + this.settingsLocation);
         }
         
     });

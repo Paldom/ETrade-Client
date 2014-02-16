@@ -10,7 +10,7 @@ define(function (require) {
         Backbone = require('backbone'),
         Marionette = require('marionette'),
         hammer = require('hammer'),
-        tpl = require('text!templates/Home.html');
+        tpl = require('text!templates/Register.html');
 
     return Backbone.Marionette.ItemView.extend({
 
@@ -28,13 +28,17 @@ define(function (require) {
         },
 
         events: {
-            'tap .station': 'selectStation'
+            'tap .team': 'regTeam',
+            'tap #btnRegOne': 'regOne'
         },
         
-        selectStation: function () {
-            App.navigate("#/station");
-        }
+        regTeam: function () {
+            App.navigate("#/station/register/team");
+        },
         
+        regOne: function () {
+            App.navigate("#/station/register/one");
+        }
         
     });
 

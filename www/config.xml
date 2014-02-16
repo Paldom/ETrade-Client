@@ -7,7 +7,11 @@
     <author email="support@blcscs.hu" href="http://blcscs.hu">
         ETrade Team
     </author>
+   
     <feature name="http://api.phonegap.com/1.0/device" />
+   
+    <gap:plugin name="com.phonegap.plugins.barcodescanner" />
+   
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />

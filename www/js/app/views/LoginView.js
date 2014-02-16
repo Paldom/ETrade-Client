@@ -47,6 +47,7 @@ define(function (require) {
         },
 
         loginFailed: function (model, xhr, options) {
+            App.navigate("#/home"); // TODO: élesben kiszedni
             if (xhr.status === 404) {
                 alert("Sikertelen bejelentkezés");
             } else {

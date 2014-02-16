@@ -11,14 +11,17 @@ define(function (require) {
     return Backbone.Marionette.AppRouter.extend({
         appRoutes: {
             '': 'login',
-            'home': 'home'
-/*            'station': 'station',
+            'home': 'home',
+            'station': 'station',
             'station/trade': 'trade',
             'station/steal': 'steal',
+            'station/bank': 'bank',
             'station/transfer': 'transfer',
-            'station/options': 'options',
-            'station/register': 'register',
-            '*actions': 'other'*/
+            'station/options': 'stationOptions',
+            'station/register': 'registerPlayer',
+            'station/register/one': 'registerOne',
+            'station/register/team': 'registerTeam',
+            '*actions': 'other'
         }
     });
 
