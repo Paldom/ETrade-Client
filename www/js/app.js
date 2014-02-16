@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define, window */
+/*global define, window, IcomaticUtils, FastClick, document */
 
 
 define(function (require) {
@@ -15,6 +15,10 @@ define(function (require) {
         App = new Backbone.Marionette.Application();
     
 
+    App.Configs = {
+        API : "http://localhost:3000"
+    };
+    
     App.addRegions({
         headerRegion: {
             selector: "#header"
@@ -40,7 +44,7 @@ define(function (require) {
         Backbone.history.start();
     });
     
-    var afterRender = function(view){
+    var afterRender = function (view) {
         IcomaticUtils.run();
         new FastClick(document.body);
         $('body').hammer();

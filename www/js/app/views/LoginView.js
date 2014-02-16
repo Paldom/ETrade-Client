@@ -17,8 +17,8 @@ define(function (require) {
         template: tpl,
 
         ui: {
-            username: "#username",
-            password: "#password"
+            username: "#inputServer",
+            password: "#inputPasswd"
         },
 
         initialize: function () {
@@ -33,8 +33,12 @@ define(function (require) {
         },
 
         login: function () {
-            App.navigate("#/home");
-            // this.model.save(this.ui.username.val(), this.ui.password.val(), this.loginSuccess, this.loginFailed);
+            this.model.set("username", this.ui.username.val());
+            this.model.set("password", this.ui.password.val());
+            this.model.fetch({
+                success: this.loginSuccess,
+                error: this.loginFailed
+            });
         },
 
         loginSuccess: function (model, resp, options) {
@@ -43,7 +47,11 @@ define(function (require) {
         },
 
         loginFailed: function (model, xhr, options) {
-            alert(options);
+            if (xhr.status === 404) {
+                alert("Sikertelen bejelentkezés");
+            } else {
+                alert("Hiba");
+            }
         }
         
     });

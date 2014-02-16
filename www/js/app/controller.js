@@ -23,7 +23,7 @@ define(function (require) {
             App.headerView.enableBack(false);
             App.headerView.enableSettings(false);
             require(["app/views/LoginView", "app/models/LoginModel"], function (View, Model) {
-                App.contentRegion.show(new View(new Model()));
+                App.contentRegion.show(new View({model: new Model()}));
             });
         },
 
