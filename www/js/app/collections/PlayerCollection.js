@@ -7,11 +7,16 @@ define(function (require) {
 
     var $ = require('jquery'),
         _ = require('underscore'),
-        Backbone = require('backbone');
+        Backbone = require('backbone'),
+        PlayerModel = require('app/models/PlayerModel');
 
     return Backbone.Collection.extend({
         
-        model : Backbone.Model
+        model : PlayerModel,
+        
+        url: function () {
+	       return App.Configs.API + '/players';
+        }
     
     });
 });

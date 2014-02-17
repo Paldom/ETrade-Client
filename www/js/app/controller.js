@@ -10,7 +10,7 @@ define(function (require) {
         Backbone = require('backbone'),
         Marionette = require('marionette'),
         HeaderView = require('app/views/HeaderView'),
-        IdentifyCollection = require('app/collections/IdentifyCollection');
+        PlayerCollection = require('app/collections/PlayerCollection');
 
     return Backbone.Marionette.Controller.extend({
 
@@ -44,8 +44,11 @@ define(function (require) {
                         App.contentRegion.show(new View({
                             collection: collection
                         }));
+                    },
+                    error: function () {
                     }
                 });
+
                         
             });
             
@@ -71,7 +74,7 @@ define(function (require) {
         
         identify: function (action) {
             
-            App.usersCollection = new IdentifyCollection();
+            var usersCollection = new PlayerCollection();
             
             var title;
             switch (action) {
@@ -92,7 +95,7 @@ define(function (require) {
         
             
             require(["app/views/IdentifyCompositeView"], function (View) {
-                var view = new View({collection: App.usersCollection});
+                var view = new View({collection: usersCollection});
                 view.setAction(action);
                 App.contentRegion.show(view);
             });
@@ -187,14 +190,18 @@ define(function (require) {
         },
         
         registerTeam: function () {
+            
+            var usersCollection = new PlayerCollection();
+            
             App.headerView.setTitle("Regisztrálás csapatban");
             App.headerView.enableBack(true);
             App.headerView.enableSettings(false);
-            require(["app/views/RegisterTeamView", "app/models/RegisterTeamModel"], function (View, Model) {
-                App.contentRegion.show(new View({
-                    model: new Model()
-                }));
+
+            require(["app/views/RegisterTeamCompositeView"], function (View) {
+                var view = new View({collection: usersCollection});
+                App.contentRegion.show(view);
             });
+            
         },
 
         other: function () {}
