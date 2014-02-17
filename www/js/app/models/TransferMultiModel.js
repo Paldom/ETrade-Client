@@ -17,7 +17,6 @@ define(function (require) {
         defaults: {
         }
         
-        
     });
     
 });

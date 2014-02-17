@@ -10,7 +10,7 @@ define(function (require) {
         Backbone = require('backbone'),
         Marionette = require('marionette'),
         hammer = require('hammer'),
-        tpl = require('text!templates/Transfer.html');
+        tpl = require('text!templates/TransferMulti.html');
 
     return Backbone.Marionette.ItemView.extend({
 
@@ -28,18 +28,7 @@ define(function (require) {
         },
 
         events: {
-            'tap #btnOK': 'ok',
-            'tap #btnCancel': 'cancel'
-        },
-        
-        ok: function () {
-            window.history.back();
-        },
-        
-        cancel: function () {
-            if (confirm("Biztos megszakítod a tranzakciót!")) {
-                window.history.back();
-            }
+            // 'tap #name': 'function'
         }
         
     });

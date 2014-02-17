@@ -18,8 +18,8 @@ define(function (require) {
         },
         
         url: function () {
-            var usrString = this.get('username') ? '?serverName=' + this.get('username') : '';
-            var pwdString = this.get('password') ? '&serverPassword=' + this.get('password') : '';
+            var usrString = this.get('serverName') ? '?serverName=' + this.get('serverName') : '';
+            var pwdString = this.get('serverPassword') ? '&serverPassword=' + this.get('serverPassword') : '';
             return App.Configs.API + '/games' + usrString + pwdString;
         },
         

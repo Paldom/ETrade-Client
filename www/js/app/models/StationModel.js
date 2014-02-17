@@ -15,8 +15,11 @@ define(function (require) {
         },
         
         defaults: {
+            name: "",
+            type: "",
+            clientSessionID: "",
+            stationID: ""
         }
-        
         
     });
     

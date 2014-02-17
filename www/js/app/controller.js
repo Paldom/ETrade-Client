@@ -9,7 +9,8 @@ define(function (require) {
         _ = require('underscore'),
         Backbone = require('backbone'),
         Marionette = require('marionette'),
-        HeaderView = require('app/views/HeaderView');
+        HeaderView = require('app/views/HeaderView'),
+        IdentifyCollection = require('app/collections/IdentifyCollection');
 
     return Backbone.Marionette.Controller.extend({
 
@@ -33,18 +34,69 @@ define(function (require) {
             App.headerView.setTitle("ETrade rendszer");
             App.headerView.enableBack(true);
             App.headerView.enableSettings(false);
-            require(["app/views/HomeView"], function (View) {
-                App.contentRegion.show(new View());
+            
+            
+            require(["app/views/StationCompositeView", "app/collections/StationsCollection"], function (View, Collection) {
+                        
+                var collection = new Collection();
+                collection.fetch({
+                    success: function () {
+                        App.contentRegion.show(new View({
+                            collection: collection
+                        }));
+                    }
+                });
+                        
             });
+            
         },
 
         station: function () {
-            App.headerView.setTitle("Állomás");
+            
+            var title;
+            if (App.station) {
+                title = App.station.get('name');
+            } else {
+                title = "Állomás";
+            }
+            
+            App.headerView.setTitle(title);
             App.headerView.enableBack(true);
             App.headerView.enableSettings(true);
             require(["app/views/StationView"], function (View) {
                 App.contentRegion.show(new View());
             });
+        },
+        
+        
+        identify: function (action) {
+            
+            App.usersCollection = new IdentifyCollection();
+            
+            var title;
+            switch (action) {
+                case 'trade': title = "Kereskedés";
+                                    break;
+                case 'steal': title = "Rablás";
+                                    break;
+                case 'transfer': title = "Mozgatás";
+                                    break;
+                case 'bank': title = "Bank";
+                                    break;
+                default: title = "Azonosítás";
+            }
+            
+            App.headerView.setTitle(title);
+            App.headerView.enableBack(true);
+            App.headerView.enableSettings(false);
+        
+            
+            require(["app/views/IdentifyCompositeView"], function (View) {
+                var view = new View({collection: App.usersCollection});
+                view.setAction(action);
+                App.contentRegion.show(view);
+            });
+            
         },
         
         trade: function () {
@@ -84,11 +136,21 @@ define(function (require) {
             App.headerView.setTitle("Mozgatás");
             App.headerView.enableBack(true);
             App.headerView.enableSettings(false);
-            require(["app/views/TransferView", "app/models/TransferModel"], function (View, Model) {
+            
+            if(App.usersCollection.length > 1) {
+                require(["app/views/TransferMultiView", "app/models/TransferMultiModel"], function (View, Model) {
                 App.contentRegion.show(new View({
-                    model: new Model()
-                }));
-            });
+                        model: new Model()
+                    }));
+                });
+            } else {
+                require(["app/views/TransferView", "app/models/TransferModel"], function (View, Model) {
+                App.contentRegion.show(new View({
+                        model: new Model()
+                    }));
+                });
+            }
+
         },
         
         stationOptions: function () {
