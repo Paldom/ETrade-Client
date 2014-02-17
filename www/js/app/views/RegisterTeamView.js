@@ -35,7 +35,10 @@ define(function (require) {
                 self.model.set("team", 1);
                 self.model.set("money", 100);
                 self.model.save(null, {
-                    success: self.teamRegisterSuccess,
+                    success: function () {
+                        var li = self.teamRegisterSuccess();
+                        self.ui.memberlist.prepend(li);
+                    },
                     error: self.teamRegisterFail
                 });
 
@@ -52,8 +55,8 @@ define(function (require) {
             var li = document.createElement("li");
             li.classList.add("topcoat-list__item");
             li.appendChild(document.createTextNode("valami")); //model.id //id helyett majd nev lesz
-            self.ui.memberlist.prepend(li);
             alert("Sikeres regisztráció! " + model.id);
+            return li;
         },
 
         teamRegisterFail: function (model, xhr, options) {
@@ -75,7 +78,10 @@ define(function (require) {
                 self.model.set("team", 1);
                 self.model.set("money", 100);
                 self.model.save(null, {
-                    success: self.teamRegisterSuccess,
+                    success: function () {
+                        var li = self.teamRegisterSuccess();
+                        self.ui.memberlist.prepend(li);
+                    },
                     error: self.teamRegisterFail
                 });
             };
