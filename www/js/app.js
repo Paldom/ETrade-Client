@@ -57,6 +57,26 @@ define(function (require) {
 
     // NFC
 
+    App.nfcTagDetectedDummy = function (nfcEvent) {
+        console.log("Dummy NFC" + nfc.bytesToHexString(nfcEvent.tag.id));
+    };
+    App.nfcTagDetected = App.nfcTagDetectedDummy;
+
+    App.setActiveNfcHandler = function (newhandler) {
+        if (typeof nfc !== "undefined") {
+            App.nfcTagDetected = newhandler;
+            if (App.nfcTagDetected != App.nfcTagDetectedDummy) {
+                console.log("Warning: NFC listener overwrite!");
+            }
+        } else {
+            console.log("Cannot set listener: NFC not available!");
+        }
+    };
+
+    App.stopActiveNfcHandler = function () {
+        App.nfcTagDetected = App.nfcTagDetectedDummy;
+    };
+
     if (typeof nfc !== "undefined") {
         nfc.addTagDiscoveredListener(
             App.nfcTagDetected,
@@ -69,26 +89,6 @@ define(function (require) {
     } else {
         console.log("NFC not available!");
     }
-
-    App.nfcTagDetectedDummy = function (nfcEvent) {
-        console.log(nfc.bytesToHexString(nfcEvent.tag.id));
-    };
-    App.nfcTagDetected = App.nfcTagDetectedDummy;
-
-    App.setActiveNfcHandler = function (newhandler) {
-        if (typeof nfc !== "undefined") {
-            if (App.nfcTagDetected != App.nfcTagDetectedDummy) {
-                console.log("Warning: NFC listener overwrite!");
-            }
-            App.nfcTagDetected = newhandler;
-        } else {
-            console.log("Cannot set listener: NFC not available!");
-        }
-    };
-
-    App.stopActiveNfcHandler = function () {
-        App.nfcTagDetected = App.nfcTagDetectedDummy;
-    };
 
 
     // QR

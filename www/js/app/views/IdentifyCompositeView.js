@@ -30,6 +30,13 @@ define(function (require) {
 
         onRender: function (that) {
             this.ui.next.attr('disabled', 'disabled');
+            App.setActiveNfcHandler(function (nfcEvent) {
+                self.collection.add({name: nfc.bytesToHexString(nfcEvent.tag.id)});
+            });
+        },
+        
+        close: function () {
+            App.stopActiveNfcHandler();
         },
 
         setAction: function (action) {
