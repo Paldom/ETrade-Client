@@ -61,6 +61,11 @@ section {
     margin: 0.5rem 0;
 }
 
+
+.text-center {
+    text-align: center;
+}
+
 .topcoat-icon {
   font-size: 1.55rem;
 }

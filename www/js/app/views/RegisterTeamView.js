@@ -17,7 +17,7 @@ define(function (require) {
         template: tpl,
 
         ui: {
-	    memberlist : "#new_team_members"
+            memberlist: "#new_team_members"
         },
 
         initialize: function () {
@@ -25,93 +25,61 @@ define(function (require) {
         },
 
         onRender: function (that) {
-	    //start nfc listener
-	    //var nfc = nfc || undefined;
-	    this.model.set("nfcID", "12345");
-	    this.model.set("gameSessionID", App.gameSessionID);
-	    this.model.set("team", 1);
-	    this.model.set("money", 100);
-            this.model.save(null, {
-                success: this.teamRegisterSuccess,
-                error: this.teamRegisterFail
+            var self = this;
+            App.setActiveNfcHandler(function (nfcEvent) {
+                console.log("Registering " + nfc.bytesToHexString(nfcEvent.tag.id));
+                console.log(self.model);
+                self.model.set("nfcID", nfc.bytesToHexString(nfcEvent.tag.id));
+                self.model.set("gameSessionID", App.gameSessionID);
+                self.model.set("team", 1);
+                self.model.set("money", 100);
+                self.model.save(null, {
+                    success: self.teamRegisterSuccess,
+                    error: self.teamRegisterFail
+                });
+
+
             });
-
-	    if (nfc !== undefined) {
-		var self = this;
-		nfc.addTagDiscoveredListener(function(nfcEvent) {
-		    console.log("Registering " + nfc.bytesToHexString(nfcEvent.tag.id));
-		    console.log(self.model);
-		    self.model.set("nfcID", nfc.bytesToHexString(nfcEvent.tag.id));
-		    self.model.set("gameSessionID", App.gameSessionID);
-		    self.model.set("team", 1);
-		    self.model.set("money", 100);
-		    self.model.save(null, {
-			success: self.teamRegisterSuccess,
-			error: self.teamRegisterFail
-		    });
-
-
-		},//App.nfcTagDetected,
-					     function() {console.log("NFC listener up.");},
-					     function() {console.log("NFC listener error.");}
-					    );
-		App.nfcTagDetectedDummy = function(nfcEvent) {
-		    console.log(nfc.bytesToHexString(nfcEvent.tag.id));
-		};
-		App.nfcTagDetected = App.nfcTagDetectedDummy;
-		
-		App.setActiveNfcHandler = function(newhandler) {
-		    if (App.nfcTagDetected != App.nfcTagDetectedDummy) {
-			console.log("Warning: NFC listener overwrite!");
-		    }
-		    App.nfcTagDetected = newhandler;
-		};
-		
-		App.setActiveNfcHandler(this.nfcRegisterTeam);	
-	    }
-	    else {
-		console.log("NFC not available!");
-	    }
         },
 
         close: function () {
-	    //stop nfc listener
-	    App.stopActiveNfcHandler = function() {
-		App.nfcTagDetected = App.nfcTagDetectedDummy;
-	    };
-
-	    App.stopActiveNfcHandler();
+            //stop nfc listener
+            App.stopActiveNfcHandler();
+        },
+        
+        teamRegisterSuccess: function (model, resp, options) {
+            var li = document.createElement("li");
+            li.classList.add("topcoat-list__item");
+            li.appendChild(document.createTextNode("valami")); //model.id //id helyett majd nev lesz
+            this.ui.memberlist.prepend(li);
+            alert("Sikeres regisztráció! " + model.id);
         },
 
-	nfcRegisterTeam: function (nfcEvent) {
-	    console.log("Registering " + nfc.bytesToHexString(nfcEvent.tag.id));
-	    console.log(this.model);
-	    this.model.set("nfcID", nfc.bytesToHexString(nfcEvent.tag.id));
-	    this.model.set("gameSessionID", App.gameSessionID);
-	    this.model.set("team", 1);
-	    this.model.set("money", 100);
-            this.model.save(null, {
-                success: this.teamRegisterSuccess,
-                error: this.teamRegisterFail
-            });
-	},
-
-	teamRegisterSuccess: function (model, resp, options) {
-	    var li = document.createElement("li");
-	    li.classList.add("topcoat-list__item");
-	    li.appendChild(document.createTextNode("valami")); //model.id //id helyett majd nev lesz
-	    this.ui.memberlist.prepend(li);
-	    alert("Sikeres regisztráció! " + model.id);
-	},
-
-	teamRegisterFail: function (model, xhr, options) {
-	    alert("Regisztrációs hiba! (" + xhr.status + ")");
-	},
+        teamRegisterFail: function (model, xhr, options) {
+            alert("Regisztrációs hiba! (" + xhr.status + ")");
+        },
 
         events: {
-            // 'tap #name': 'function'
-        }
-        
+            'tap #btnQr': 'qr'
+        },
+
+        qr: function () {
+            var self = this;
+            var success = function (result) {
+                console.log("Registering form qr" + result.text);
+                console.log(self.model);
+                self.model.set("nfcID", result.text);
+                self.model.set("gameSessionID", App.gameSessionID);
+                self.model.set("team", 1);
+                self.model.set("money", 100);
+                self.model.save(null, {
+                    success: self.teamRegisterSuccess,
+                    error: self.teamRegisterFail
+                });
+            };
+            App.qrscan(success);
+        },
+
     });
 
 });
