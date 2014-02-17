@@ -29,6 +29,7 @@ define(function (require) {
             App.setActiveNfcHandler(function (nfcEvent) {
                 console.log("Registering " + nfc.bytesToHexString(nfcEvent.tag.id));
                 console.log(self.model);
+                self.model.id = null;
                 self.model.set("nfcID", nfc.bytesToHexString(nfcEvent.tag.id));
                 self.model.set("gameSessionID", App.gameSessionID);
                 self.model.set("team", 1);
@@ -68,6 +69,7 @@ define(function (require) {
             var success = function (result) {
                 console.log("Registering form qr" + result.text);
                 console.log(self.model);
+                self.model.id = null;
                 self.model.set("nfcID", result.text);
                 self.model.set("gameSessionID", App.gameSessionID);
                 self.model.set("team", 1);

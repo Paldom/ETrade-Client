@@ -31,6 +31,7 @@ define(function (require) {
         onRender: function (that) {
             this.ui.next.attr('disabled', 'disabled');
             App.setActiveNfcHandler(function (nfcEvent) {
+                console.log("NFC azonosítva: " + nfc.bytesToHexString(nfcEvent.tag.id));
                 self.collection.add({name: nfc.bytesToHexString(nfcEvent.tag.id)});
             });
         },
