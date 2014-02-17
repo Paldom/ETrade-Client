@@ -24,7 +24,7 @@ define(function (require) {
         },
 
         onRender: function (that) {
-            this.ui.name.text(this.model.get('name'));
+            this.ui.name.text(this.model.get('nfcID'));
         },
         
         events: {
