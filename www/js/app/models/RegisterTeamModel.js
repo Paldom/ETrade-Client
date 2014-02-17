@@ -18,7 +18,7 @@ define(function (require) {
         },
         
         url: function () {
-	    return App.Confings.API + '/players';
+	    return App.Configs.API + '/players';
         }
 
     });
