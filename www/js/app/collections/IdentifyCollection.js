@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define */
+/*global define, StationModel, App */
 
 define(function (require) {
 
@@ -9,15 +9,9 @@ define(function (require) {
         _ = require('underscore'),
         Backbone = require('backbone');
 
-    return Backbone.Model.extend({
-
-        initialize: function () {
-        },
+    return Backbone.Collection.extend({
         
-        defaults: {
-        }
-        
-        
-    });
+        model : Backbone.Model
     
+    });
 });

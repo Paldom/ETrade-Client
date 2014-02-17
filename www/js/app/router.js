@@ -17,6 +17,7 @@ define(function (require) {
             'station/steal': 'steal',
             'station/bank': 'bank',
             'station/transfer': 'transfer',
+            'station/identify/:action': 'identify',
             'station/options': 'stationOptions',
             'station/register': 'registerPlayer',
             'station/register/one': 'registerOne',

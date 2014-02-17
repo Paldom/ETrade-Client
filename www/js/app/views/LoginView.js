@@ -33,8 +33,8 @@ define(function (require) {
         },
 
         login: function () {
-            this.model.set("username", this.ui.username.val());
-            this.model.set("password", this.ui.password.val());
+            this.model.set("serverName", this.ui.username.val());
+            this.model.set("serverPassword", this.ui.password.val());
             this.model.fetch({
                 success: this.loginSuccess,
                 error: this.loginFailed
@@ -42,7 +42,7 @@ define(function (require) {
         },
 
         loginSuccess: function (model, resp, options) {
-            App.GameSessionID = model.gameSessionID;
+            App.gameSessionID = model.attributes.gameSessionID;
             App.navigate("#/home");
         },
 

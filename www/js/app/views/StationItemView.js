@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define, alert, App*/
+/*global define, console, alert, App, navigator*/
 
 define(function (require) {
 
@@ -9,15 +9,15 @@ define(function (require) {
         _ = require('underscore'),
         Backbone = require('backbone'),
         Marionette = require('marionette'),
-        hammer = require('hammer'),
-        tpl = require('text!templates/Transfer.html');
+        tpl = require('text!templates/StationItem.html');
 
     return Backbone.Marionette.ItemView.extend({
 
         template: tpl,
 
         ui: {
-          // name : "#name",
+            name : "#name",
+            type : "#type"
         },
 
         initialize: function () {
@@ -25,23 +25,18 @@ define(function (require) {
         },
 
         onRender: function (that) {
+            this.ui.name.text(this.model.get('name'));
+            this.ui.type.text(this.model.get('type'));
         },
-
+        
         events: {
-            'tap #btnOK': 'ok',
-            'tap #btnCancel': 'cancel'
+            'tap .station': 'selectStation'
         },
         
-        ok: function () {
-            window.history.back();
-        },
-        
-        cancel: function () {
-            if (confirm("Biztos megszakítod a tranzakciót!")) {
-                window.history.back();
-            }
+        selectStation: function () {
+            App.station = this.model;
+            App.navigate("#/station");
         }
         
     });
-
 });

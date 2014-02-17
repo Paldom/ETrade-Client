@@ -1,5 +1,5 @@
 /*jslint nomen: true */
-/*global define, alert, App*/
+/*global define, console, alert, App, navigator*/
 
 define(function (require) {
 
@@ -9,15 +9,14 @@ define(function (require) {
         _ = require('underscore'),
         Backbone = require('backbone'),
         Marionette = require('marionette'),
-        hammer = require('hammer'),
-        tpl = require('text!templates/Home.html');
+        tpl = require('text!templates/IdentifyItem.html');
 
     return Backbone.Marionette.ItemView.extend({
 
         template: tpl,
 
         ui: {
-          // name : "#name",
+            name : "#name"
         },
 
         initialize: function () {
@@ -25,17 +24,12 @@ define(function (require) {
         },
 
         onRender: function (that) {
-        },
-
-        events: {
-            'tap .station': 'selectStation'
+            this.ui.name.text(this.model.get('name'));
         },
         
-        selectStation: function () {
-            App.navigate("#/station");
+        events: {
+            //'tap .station': 'selectStation'
         }
         
-        
     });
-
 });

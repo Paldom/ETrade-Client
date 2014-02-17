@@ -12,7 +12,7 @@ define(function (require) {
         hammer = require('hammer'),
         tpl = require('text!templates/Station.html');
 
-    return Backbone.Marionette.ItemView.extend({
+    return Backbone.Marionette.CompositeView.extend({
 
         template: tpl,
 
@@ -31,38 +31,23 @@ define(function (require) {
             'tap #btnTrade': 'trade',
             'tap #btnTransfer': 'transfer',
             'tap #btnSteal': 'steal',
-            'tap #btnBank': 'bank',
-            'tap #btnIdentify' : 'qr'
+            'tap #btnBank': 'bank'
         },
         
         trade: function () {
-            App.navigate("#/station/trade");
+            App.navigate("#/station/identify/trade");
         },
         
         transfer: function () {
-            App.navigate("#/station/transfer");
+            App.navigate("#/station/identify/transfer");
         },
         
         steal: function () {
-            App.navigate("#/station/steal");
+            App.navigate("#/station/identify/steal");
         },
         
         bank: function () {
-            App.navigate("#/station/bank");
-        },
-       
-        qr: function () {
-            cordova.plugins.barcodeScanner.scan(
-               function (result) {
-                  alert("We got a barcode\n" +
-                     "Result: " + result.text + "\n" +
-                     "Format: " + result.format + "\n" +
-                     "Cancelled: " + result.cancelled);
-               },
-               function (error) {
-                  alert("Scanning failed: " + error);
-               }
-            );
+            App.navigate("#/station/identify/bank");
         }
         
     });
