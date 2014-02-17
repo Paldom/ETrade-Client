@@ -35,7 +35,7 @@ define(function (require) {
                 var nfcID = nfc.bytesToHexString(nfcEvent.tag.id);
                 console.log("Registering " + nfcID);
                 var self = this;
-                var playerModel = this.createPlayer(nfcID);
+                var playerModel = this.createPlayerModel(nfcID);
                 playerModel.save(null, {
                     success: function (model, resp, options) {
                         self.collection.add(playerModel);
@@ -72,7 +72,7 @@ define(function (require) {
                 qrID = result.text;
                 console.log("Registering form QR" + qrID);
                 var self = this;
-                var playerModel = this.createPlayer(qrID);
+                var playerModel = this.createPlayerModel(qrID);
                 playerModel.save(null, {
                     success: function (model, resp, options) {
                         self.collection.add(playerModel);
