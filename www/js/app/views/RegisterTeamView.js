@@ -52,7 +52,7 @@ define(function (require) {
             var li = document.createElement("li");
             li.classList.add("topcoat-list__item");
             li.appendChild(document.createTextNode("valami")); //model.id //id helyett majd nev lesz
-            this.ui.memberlist.prepend(li);
+            self.ui.memberlist.prepend(li);
             alert("Sikeres regisztráció! " + model.id);
         },
 
