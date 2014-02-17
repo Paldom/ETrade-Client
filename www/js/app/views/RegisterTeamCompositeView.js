@@ -34,7 +34,6 @@ define(function (require) {
             App.setActiveNfcHandler(function (nfcEvent) {
                 var nfcID = nfc.bytesToHexString(nfcEvent.tag.id);
                 console.log("Registering " + nfcID);
-                var self = this;
                 var playerModel = self.createPlayerModel(nfcID);
                 playerModel.save(null, {
                     success: function (model, resp, options) {
@@ -71,7 +70,6 @@ define(function (require) {
             var success = function (result) {
                 qrID = result.text;
                 console.log("Registering form QR" + qrID);
-                var self = this;
                 var playerModel = self.createPlayerModel(qrID);
                 playerModel.save(null, {
                     success: function (model, resp, options) {
