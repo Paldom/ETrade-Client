@@ -15,8 +15,12 @@ define(function (require) {
         },
         
         defaults: {
-        }
+        },
         
+        url: function () {
+	    return App.Confings.API + '/players';
+        }
+
     });
     
 });
