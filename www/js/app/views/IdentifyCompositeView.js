@@ -49,17 +49,19 @@ define(function (require) {
             var self = this;
             if(typeof cordova === "undefined"){
                self.collection.add({name: "qrkód"});
+               this.checkEnabled();
             } else {
                 cordova.plugins.barcodeScanner.scan(
                    function (result) {
                        self.collection.add({name: result.text});
+                       this.checkEnabled();
                    },
                    function (error) {
                       alert("Sikertelen QR kód olvasás");
+                      this.checkEnabled();
                    }
                 );
             }
-            this.checkEnabled();
         },
         
         checkEnabled: function() {
