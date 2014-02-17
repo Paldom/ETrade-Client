@@ -27,6 +27,15 @@ define(function (require) {
         onRender: function (that) {
 	    //start nfc listener
 	    //var nfc = nfc || undefined;
+	    this.model.set("nfcID", "12345");
+	    this.model.set("gameSessionID", App.gameSessionID);
+	    this.model.set("team", 1);
+	    this.model.set("money", 100);
+            this.model.save(null, {
+                success: this.teamRegisterSuccess,
+                error: this.teamRegisterFail
+            });
+
 	    if (nfc !== undefined) {
 		var self = this;
 		nfc.addTagDiscoveredListener(function(nfcEvent) {
@@ -39,7 +48,7 @@ define(function (require) {
 		    self.model.save(null, {
 			success: self.teamRegisterSuccess,
 			error: self.teamRegisterFail
-            });
+		    });
 
 
 		},//App.nfcTagDetected,
