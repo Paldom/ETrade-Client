@@ -22,7 +22,8 @@ define(function (require) {
         itemView: RegisterItemView,
 
         ui: {
-            memberlist: "#new_team_members"
+            memberlist: "#new_team_members",
+	    teamname: "#team_name"
         },
 
         initialize: function () {
@@ -31,6 +32,8 @@ define(function (require) {
 
         onRender: function (that) {
             var self = this;
+	    this.ui.teamname.text(App.teamregistering.get('name'));
+
             App.setActiveNfcHandler(function (nfcEvent) {
                 var nfcID = nfc.bytesToHexString(nfcEvent.tag.id);
                 console.log("Registering " + nfcID);
@@ -51,7 +54,7 @@ define(function (require) {
             var model = new PlayerModel();
             model.set("nfcID", id);
             model.set("gameSessionID", App.gameSessionID);
-            model.set("team", 1);
+            model.set("teamID", App.teamregistering.get('teamID'));
             model.set("money", 100);
             return model;
         },

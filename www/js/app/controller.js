@@ -64,7 +64,7 @@ define(function (require) {
             }
             
             App.headerView.setTitle(title);
-            App.headerView.enableBack(true);
+            App.headerView.enableBack(false); //ne lehessen veletlen kilepni az allomasrol
             App.headerView.enableSettings(true);
             require(["app/views/StationView"], function (View) {
                 App.contentRegion.show(new View());
@@ -158,7 +158,7 @@ define(function (require) {
         
         stationOptions: function () {
             App.headerView.setTitle("Állomás beállítások");
-            App.headerView.enableBack(true);
+            App.headerView.enableBack(true); 
             App.headerView.enableSettings(false);
             require(["app/views/OptionsView", "app/models/OptionsModel"], function (View, Model) {
                 App.contentRegion.show(new View({
@@ -168,14 +168,28 @@ define(function (require) {
         },
         
         registerPlayer: function () {
+
             App.headerView.setTitle("Játékos regisztrálása");
             App.headerView.enableBack(true);
             App.headerView.enableSettings(false);
-            require(["app/views/RegisterView", "app/models/RegisterModel"], function (View, Model) {
-                App.contentRegion.show(new View({
-                    model: new Model()
-                }));
+
+            require(["app/views/RegisterCompositeView", "app/collections/RegisterCollection"], function (View, Collection) {
+                        
+                var collection = new Collection();
+                collection.fetch({
+                    success: function () {
+                        App.contentRegion.show(new View({
+                            collection: collection
+                        }));
+                    },
+                    error: function () {
+                    }
+                });
+
+                        
             });
+
+
         },
         
         registerOne: function () {
